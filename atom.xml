@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujiayii.github.io/"/>
-  <updated>2018-12-31T09:00:08.880Z</updated>
+  <updated>2019-01-01T02:52:40.562Z</updated>
   <id>https://liujiayii.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo有趣的插件</title>
+    <link href="https://liujiayii.github.io/2019/01/01/hexo%E6%9C%89%E8%B6%A3%E7%9A%84%E6%8F%92%E4%BB%B6/"/>
+    <id>https://liujiayii.github.io/2019/01/01/hexo有趣的插件/</id>
+    <published>2019-01-01T02:47:47.000Z</published>
+    <updated>2019-01-01T02:52:40.562Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装-hexolive2d"><a href="#安装-hexolive2d" class="headerlink" title="安装 hexolive2d"></a>安装 hexolive2d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure><h2 id="安装-hexolive2d-选取模型"><a href="#安装-hexolive2d-选取模型" class="headerlink" title="安装 hexolive2d 选取模型"></a>安装 hexolive2d 选取模型</h2><p>点击<a href="https://huaji8.top/post/live2d-plugin-2.0/" target="_blank" rel="noopener">官网</a>，选好对应的模型，使用 npm install 模型的包名来安装。(xxxxx)是选取模型的名字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-xxxxx</span><br></pre></td></tr></table></figure></p><h2 id="在站点根目录-config-yml-文件添加配置"><a href="#在站点根目录-config-yml-文件添加配置" class="headerlink" title="在站点根目录 _config.yml 文件添加配置."></a>在站点根目录 _config.yml 文件添加配置.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">enable: true</span><br><span class="line">scriptFrom: local</span><br><span class="line">pluginRootPath: live2dw/</span><br><span class="line">pluginJsPath: lib/</span><br><span class="line">pluginModelPath: assets/</span><br><span class="line">tagMode: false</span><br><span class="line">debug: false</span><br><span class="line">model:</span><br><span class="line">  use: live2d-widget-model-xxxxx</span><br><span class="line">display:</span><br><span class="line">  position: left</span><br><span class="line">  width: 150</span><br><span class="line">  height: 300</span><br><span class="line">mobile:</span><br><span class="line">  show: false</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;安装-hexolive2d&quot;&gt;&lt;a href=&quot;#安装-hexolive2d&quot; class=&quot;headerlink&quot; title=&quot;安装 hexolive2d&quot;&gt;&lt;/a&gt;安装 hexolive2d&lt;/h2&gt;&lt;figure class=&quot;highlight plai
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://liujiayii.github.io/categories/Hexo/"/>
+    
+    
+      <category term="-Hexo" scheme="https://liujiayii.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo基本使用</title>
