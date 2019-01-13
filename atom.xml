@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujiayii.github.io/"/>
-  <updated>2019-01-11T13:41:33.545Z</updated>
+  <updated>2019-01-13T13:13:08.687Z</updated>
   <id>https://liujiayii.github.io/</id>
   
   <author>
@@ -17,19 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>小程序注意事项</title>
-    <link href="https://liujiayii.github.io/2019/01/11/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>https://liujiayii.github.io/2019/01/11/小程序注意事项/</id>
-    <published>2019-01-11T13:07:52.000Z</published>
-    <updated>2019-01-11T13:41:33.545Z</updated>
+    <title>年轻人的第一次年会</title>
+    <link href="https://liujiayii.github.io/2019/01/13/%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B9%B4%E4%BC%9A/"/>
+    <id>https://liujiayii.github.io/2019/01/13/年轻人的第一次年会/</id>
+    <published>2019-01-13T12:18:21.000Z</published>
+    <updated>2019-01-13T13:13:08.687Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一、遇到的问题"><a href="#一、遇到的问题" class="headerlink" title="一、遇到的问题"></a>一、遇到的问题</h2><h3 id="1-在手机上调试的坑"><a href="#1-在手机上调试的坑" class="headerlink" title="1.在手机上调试的坑"></a>1.在手机上调试的坑</h3><ul><li>请务必关掉防火墙！请务必关掉防火墙！请务必关掉防火墙！重要的事情说三遍！请保持手机和电脑在同一局域网内，请关掉https验证！<h3 id="2-请务必手动设置wx-request请求的header-否则后台接受不到数据"><a href="#2-请务必手动设置wx-request请求的header-否则后台接受不到数据" class="headerlink" title="2.请务必手动设置wx.request请求的header,否则后台接受不到数据"></a>2.请务必手动设置wx.request请求的header,否则后台接受不到数据</h3>+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">header: &#123;</span><br><span class="line">            &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;，</span><br><span class="line">            &quot;Cookie&quot;: &quot;JSESSIONID=&quot; + Cookie</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li></ul><h3 id="3-小程序的data"><a href="#3-小程序的data" class="headerlink" title="3.小程序的data"></a>3.小程序的data</h3><ul><li>双向绑定的数据是一个对象属性而非变量，不能直接写属性名调用<h3 id="4-this的指向"><a href="#4-this的指向" class="headerlink" title="4.this的指向"></a>4.this的指向</h3></li><li>函数内的指向是当前注册的Page</li><li>回调函数内的this不是Page，可以写成箭头函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">success: (res)=&gt;&#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>或者在函数内<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const that = this</span><br><span class="line">...</span><br><span class="line">success()&#123;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h3 id="5-过多的setData会导致页面卡顿……"><a href="#5-过多的setData会导致页面卡顿……" class="headerlink" title="5.过多的setData会导致页面卡顿……"></a>5.过多的setData会导致页面卡顿……</h3><ul><li>及其卡顿……不知道为什么在添加了wx.loading之后就感觉不卡了，不知道是不是心理作用</li><li>尽量使用局部变量，页面unLoad记得销毁data</li></ul><h3 id="6……"><a href="#6……" class="headerlink" title="6……"></a>6……</h3><h2 id="二、bug收集"><a href="#二、bug收集" class="headerlink" title="二、bug收集"></a>二、bug收集</h2><h3 id="1-wx-hideLoading会销毁wx-showToast"><a href="#1-wx-hideLoading会销毁wx-showToast" class="headerlink" title="1.wx.hideLoading会销毁wx.showToast"></a>1.wx.hideLoading会销毁wx.showToast</h3><ul><li>目测遇到这种问题的不止我一个人，不清楚是官方故意而为之，还是bug<h3 id="2-有赞的tab组件bug"><a href="#2-有赞的tab组件bug" class="headerlink" title="2.有赞的tab组件bug"></a>2.有赞的tab组件bug</h3></li><li>不能在开发者工具中上下滑动页面，不能在iOS端滑动！（准备下周看一下）<h3 id="3-开发者工具bug极多"><a href="#3-开发者工具bug极多" class="headerlink" title="3.开发者工具bug极多"></a>3.开发者工具bug极多</h3></li><li>长时间不用会黑屏（频繁）</li><li>长时间不用编辑器可能会无法复制、无法打字（偶尔）</li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>2019年1月12日至13日，我参加了我工作以来的第一次年会。12日折腾了一整天，从早上开始就折腾这个，下午的时候一直在弄年会（自己作为临时安排的迎宾人员，从下午一直到年会开始，忙个不停，然后开始各类节目，就餐等）站的累死了，然后发现了自己很多的不足。</p></li><li><p>年会的节目，总公司的小伙伴们很给力，相比自己公司的小伙伴，就显得稚嫩很多。还有其它分公司的节目，也还不错。年会上有好多漂亮的小姐姐，多才多艺，可惜自己还没有这个勇气上去搭讪（😂）。ps：年会晚餐很难吃，不如午餐的自助餐。</p></li><li><p>第二天上午就是各个领导们的讲话，给我留下印象最深的3个领导有3个：</p><ul><li>房产部的柳总：温文尔雅，平易近人。</li><li>技术部的张总：平时看起来很随意的飞哥，在讲话的时候也紧张了（😂）。</li><li>董事长张总：成功的人总是有道理的</li></ul></li><li><p>我以前一直认为，只要自己现在够努力，上天不会亏待自己，今天张总的一席话，收益良多。张总的眼光放的真的很长远，长远的目标离不开每日的耕耘，长远目标绝非说大话。空谈误国，实干兴邦。上一年年会立下的目标，成立六大产业子公司，如今基本成型，今年年会也立下了个小flag。实干家有很多，华为总裁余承东先生就是一个实干家，很多人说他爱吹牛，给了他一个外号“余大嘴”，而我并不赞同，华为终端从others做到中国第一，依靠的不只是华为这座航空母舰。（理科生文采不好见谅）</p></li><li><p>想说的话还有很多，暂时就这样吧，可能以后还会重新编辑。</p></li><li><p>然后，年会还是很棒的，不知道下一次年会自己还在不在，共同努力吧！</p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;一、遇到的问题&quot;&gt;&lt;a href=&quot;#一、遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;一、遇到的问题&quot;&gt;&lt;/a&gt;一、遇到的问题&lt;/h2&gt;&lt;h3 id=&quot;1-在手机上调试的坑&quot;&gt;&lt;a href=&quot;#1-在手机上调试的坑&quot; class=&quot;head
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;2019年1月12日至13日，我参加了我工作以来的第一次年会。12日折腾了一整天，从早上开始就折腾这个，下午的时候一直在弄年会（自己作为临时安排的迎宾人员，从下午一直到年会开始，忙个不停，然后开始各类节目，就餐等）站的累死了，然后发现了自己很多的不足。&lt;/
+      
+    
+    </summary>
+    
+      <category term="工作" scheme="https://liujiayii.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="年会" scheme="https://liujiayii.github.io/tags/%E5%B9%B4%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序注意事项</title>
+    <link href="https://liujiayii.github.io/2019/01/11/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>https://liujiayii.github.io/2019/01/11/小程序注意事项/</id>
+    <published>2019-01-11T13:07:52.000Z</published>
+    <updated>2019-01-13T12:15:10.732Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、遇到的问题"><a href="#一、遇到的问题" class="headerlink" title="一、遇到的问题"></a>一、遇到的问题</h2><ul><li>1.请务必关掉防火墙！请务必关掉防火墙！请务必关掉防火墙！重要的事情说三遍！请保持手机和电脑在同一局域网内，请关掉https验证！</li><li>2.如果要使用post请求，请务必手动设置wx.request请求的header,否则后台接受不到数据</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">header: &#123;</span><br><span class="line">            &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;，</span><br><span class="line">            &quot;Cookie&quot;: &quot;JSESSIONID=&quot; + Cookie</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><ul><li>3.小程序的data：双向绑定的数据是一个对象属性而非变量，不能直接写属性名调用。</li><li>4.this的指向：函数内的指向是当前注册的Page;回调函数内的this不是Page，可以写成箭头函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">success: (res)=&gt;&#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>或者在函数内<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const that = this</span><br><span class="line">...</span><br><span class="line">success(res)&#123;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><ul><li><p>5.过多的setData会导致页面卡顿…… 及其卡顿……不知道为什么在添加了wx.loading之后就感觉不卡了，不知道是不是心理作用，尽量使用局部变量，页面unLoad记得销毁data（用缓存可能更好，目前还没有涉及到）。</p></li><li><p>6.微信开放能力的拨打电话要求电话号码类型为string，而非number，请不要怀疑这个设定！</p></li></ul><h2 id="二、bug收集"><a href="#二、bug收集" class="headerlink" title="二、bug收集"></a>二、bug收集</h2><ul><li>1.wx.hideLoading会销毁wx.showToast：目测遇到这种问题的不止我一个人，不清楚是官方故意而为之，还是bug。</li><li>2.有赞的tab组件bug：不能在开发者工具中上下滑动页面，不能在iOS端滑动！（准备下周看一下）。</li><li>3.开发者工具bug极多：长时间不用会黑屏（频繁）；长时间不用编辑器可能会无法复制、无法打字（偶尔）。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一、遇到的问题&quot;&gt;&lt;a href=&quot;#一、遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;一、遇到的问题&quot;&gt;&lt;/a&gt;一、遇到的问题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1.请务必关掉防火墙！请务必关掉防火墙！请务必关掉防火墙！重要的事情说三遍！请保持手机和
       
     
     </summary>
@@ -46,7 +73,7 @@
     <link href="https://liujiayii.github.io/2019/01/01/hexo%E6%9C%89%E8%B6%A3%E7%9A%84%E6%8F%92%E4%BB%B6/"/>
     <id>https://liujiayii.github.io/2019/01/01/hexo有趣的插件/</id>
     <published>2019-01-01T02:47:47.000Z</published>
-    <updated>2019-01-01T02:52:40.562Z</updated>
+    <updated>2019-01-13T12:19:01.152Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装-hexolive2d"><a href="#安装-hexolive2d" class="headerlink" title="安装 hexolive2d"></a>安装 hexolive2d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure><h2 id="安装-hexolive2d-选取模型"><a href="#安装-hexolive2d-选取模型" class="headerlink" title="安装 hexolive2d 选取模型"></a>安装 hexolive2d 选取模型</h2><p>点击<a href="https://huaji8.top/post/live2d-plugin-2.0/" target="_blank" rel="noopener">官网</a>，选好对应的模型，使用 npm install 模型的包名来安装。(xxxxx)是选取模型的名字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-xxxxx</span><br></pre></td></tr></table></figure></p><h2 id="在站点根目录-config-yml-文件添加配置"><a href="#在站点根目录-config-yml-文件添加配置" class="headerlink" title="在站点根目录 _config.yml 文件添加配置."></a>在站点根目录 _config.yml 文件添加配置.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">enable: true</span><br><span class="line">scriptFrom: local</span><br><span class="line">pluginRootPath: live2dw/</span><br><span class="line">pluginJsPath: lib/</span><br><span class="line">pluginModelPath: assets/</span><br><span class="line">tagMode: false</span><br><span class="line">debug: false</span><br><span class="line">model:</span><br><span class="line">  use: live2d-widget-model-xxxxx</span><br><span class="line">display:</span><br><span class="line">  position: left</span><br><span class="line">  width: 150</span><br><span class="line">  height: 300</span><br><span class="line">mobile:</span><br><span class="line">  show: false</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -62,7 +89,7 @@
       <category term="Hexo" scheme="https://liujiayii.github.io/categories/Hexo/"/>
     
     
-      <category term="-Hexo" scheme="https://liujiayii.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://liujiayii.github.io/tags/Hexo/"/>
     
   </entry>
   
