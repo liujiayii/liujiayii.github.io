@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujiayii.github.io/"/>
-  <updated>2019-01-21T12:31:13.972Z</updated>
+  <updated>2019-02-04T02:44:12.650Z</updated>
   <id>https://liujiayii.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于vue+element-ui的后台管理系统</title>
+    <link href="https://liujiayii.github.io/2019/02/04/%E5%9F%BA%E4%BA%8Evue-element-ui%E7%9A%84%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://liujiayii.github.io/2019/02/04/基于vue-element-ui的后台管理系统/</id>
+    <published>2019-02-04T02:35:32.000Z</published>
+    <updated>2019-02-04T02:44:12.650Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>项目源码地址： <a href="https://github.com/liujiayii/car-admin" target="_blank" rel="noopener">https://github.com/liujiayii/car-admin</a></li><li>欢迎大家踊跃 提出建议 点个Star或者Fork支持一下~</li><li>技术栈：vue,element-ui,vue-cli3全家桶(vue-router、vuex),Jquery Ajax.</li><li>ps：刚开始做，边学习变做的小demo（其实并不小，几十个页面）</li><li>等待更新ing……</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;项目源码地址： &lt;a href=&quot;https://github.com/liujiayii/car-admin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/liujiayii/car-admin&lt;/a&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="vue" scheme="https://liujiayii.github.io/categories/vue/"/>
+    
+    
+      <category term="vue" scheme="https://liujiayii.github.io/tags/vue/"/>
+    
+      <category term="element-ui" scheme="https://liujiayii.github.io/tags/element-ui/"/>
+    
+  </entry>
   
   <entry>
     <title>小程序购物车功能</title>
