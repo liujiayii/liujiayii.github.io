@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liujiayii.github.io/"/>
-  <updated>2019-02-11T13:37:31.860Z</updated>
+  <updated>2019-03-04T11:47:33.137Z</updated>
   <id>https://liujiayii.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://liujiayii.github.io/2019/02/04/%E5%9F%BA%E4%BA%8EVue-Element-ui%E7%9A%84%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     <id>https://liujiayii.github.io/2019/02/04/基于Vue-Element-ui的后台管理系统/</id>
     <published>2019-02-04T02:35:32.000Z</published>
-    <updated>2019-02-11T13:37:31.860Z</updated>
+    <updated>2019-03-04T11:47:33.137Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>项目源码地址： <a href="https://github.com/liujiayii/Element-Admin" target="_blank" rel="noopener">https://github.com/liujiayii/Element-Admin</a></li><li>欢迎大家踊跃 提出建议 点个Star或者Fork支持一下~</li><li>技术栈：Vue,Element-ui,Vue-cli3全家桶(Vue-router、Vuex),Jquery Ajax.</li><li>ps：刚开始做，边学习变做的小demo（其实并不小，几十个页面）</li><li>等待更新ing……</li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li>项目源码地址： <a href="https://github.com/liujiayii/Element-Admin" target="_blank" rel="noopener">https://github.com/liujiayii/Element-Admin</a></li><li>欢迎大家踊跃 提出建议 点个Star或者Fork支持一下~</li><li>技术栈：Vue,Element-ui,Vue-cli3全家桶(Vue-router、Vuex),Vue-axios.</li><li>ps：刚开始做，边学习变做的小demo（其实并不小，几十个页面）</li><li>等待更新ing……</li></ul>]]></content>
     
     <summary type="html">
     
