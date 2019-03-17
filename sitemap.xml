@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liujiayii.github.io/2018/12/30/hello-world/</loc>
+    
+    <lastmod>2019-03-17T11:03:09.492Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujiayii.github.io/2018/12/31/hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2019-03-17T11:02:07.867Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujiayii.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-03-17T10:39:02.538Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liujiayii.github.io/project/index.html</loc>
+    
+    <lastmod>2019-03-17T10:39:02.491Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liujiayii.github.io/about/index.html</loc>
     
     <lastmod>2019-03-04T11:51:06.109Z</lastmod>
@@ -51,65 +79,9 @@
   </url>
   
   <url>
-    <loc>https://liujiayii.github.io/schedule/index.html</loc>
-    
-    <lastmod>2018-12-31T09:28:46.415Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujiayii.github.io/2018/12/31/hello-world/</loc>
-    
-    <lastmod>2018-12-31T09:00:18.610Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujiayii.github.io/2018/12/31/hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2018-12-31T09:00:08.880Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujiayii.github.io/404.html</loc>
-    
-    <lastmod>2018-12-31T08:45:56.094Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liujiayii.github.io/categories/index.html</loc>
     
     <lastmod>2018-12-31T07:14:58.618Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujiayii.github.io/tags/index.html</loc>
-    
-    <lastmod>2018-12-31T07:13:02.864Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujiayii.github.io/404/index.html</loc>
-    
-    <lastmod>2018-12-31T04:18:50.561Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujiayii.github.io/commonweal/index.html</loc>
-    
-    <lastmod>2018-12-31T03:48:20.881Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liujiayii.github.io/sitemap/index.html</loc>
-    
-    <lastmod>2018-12-31T03:48:06.946Z</lastmod>
     
   </url>
   
