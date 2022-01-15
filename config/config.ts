@@ -2,7 +2,7 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'Weber',
-  outputPath: 'docs-dist',
+  outputPath: 'build',
   mode: 'site',
   description: '前端掌握未来',
   menus: {
